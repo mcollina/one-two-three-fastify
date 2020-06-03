@@ -1,0 +1,31 @@
+{
+  "name": "example",
+  "version": "0.0.1",
+  "description": "A Fastify example",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcollina/one-two-three-fastify.git"
+  },
+  "author": "Matteo Collina <hello@matteocollina.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcollina/one-two-three-fastify/issues"
+  },
+  "homepage": "https://github.com/mcollina/one-two-three-fastify#readme",
+  "dependencies": {
+    "desm": "^1.0.0",
+    "fastify": "^3.0.0-rc.3",
+    "fastify-autoload": "^3.0.0",
+    "fastify-jwt": "^2.1.0",
+    "pino-pretty": "^4.0.0"
+  },
+  "devDependencies": {
+    "standard": "^14.3.4",
+    "tape": "^5.0.1"
+  }
+}
