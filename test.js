@@ -42,7 +42,6 @@ test('authentication', async ({ deepEqual }) => {
     }
   })).json()
 
-
   const res = await server.inject({
     url: '/protected/something',
     headers: {

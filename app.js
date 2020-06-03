@@ -6,7 +6,7 @@ export default async function (app, opts) {
     secret: 'CHANGEME'
   })
 
-  app.decorate("authenticate", async function(request, reply) {
+  app.decorate('authenticate', async function (request, reply) {
     try {
       await request.jwtVerify()
     } catch (err) {
