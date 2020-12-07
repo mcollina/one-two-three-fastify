@@ -1,7 +1,9 @@
-import test from 'tape'
+import t from 'tap'
 import fastify from 'fastify'
 import fp from 'fastify-plugin'
 import app from '../../../app.js'
+
+const test = t.test
 
 test('authentication', async ({ deepEqual }) => {
   const server = fastify()
