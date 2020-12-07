@@ -12,7 +12,7 @@ export default async function (app, opts) {
     const { username, password } = req.body
 
     if (username !== 'matteo' && password !== 'collina') {
-      throw new errors.UnauthorizedError()
+      throw new errors.Unauthorized()
     }
 
     const token = app.jwt.sign({ username })
