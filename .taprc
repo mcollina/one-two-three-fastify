@@ -2,5 +2,5 @@ esm: false
 ts: false
 jsx: false
 flow: false
-coverage: true
+coverage: false
 jobs: 1

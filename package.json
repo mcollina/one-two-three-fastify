@@ -8,7 +8,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "standard && tap -J `find ./test -name *.test.js`"
+    "test": "standard && tap",
+    "coverage": "c8 npm test"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "pino-pretty": "^4.3.0"
   },
   "devDependencies": {
+    "c8": "^7.3.5",
     "standard": "^16.0.3",
     "tap": "^14.11.0"
   }

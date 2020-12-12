@@ -3,7 +3,10 @@ import jwt from 'fastify-jwt'
 
 export default async function (app, opts) {
   app.register(jwt, {
-    secret: 'CHANGEME'
+    secret: 'CHANGEME',
+    sign: {
+      expiresIn: 3600
+    }
   })
 
   app.decorate('authenticate', async function (request, reply) {
