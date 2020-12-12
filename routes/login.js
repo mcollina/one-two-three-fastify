@@ -11,7 +11,7 @@ export default async function (app, opts) {
   }, async (req, res) => {
     const { username, password } = req.body
 
-    if (username !== 'matteo' && password !== 'collina') {
+    if (!(username === 'matteo' && password === 'collina')) {
       throw new errors.Unauthorized()
     }
 
