@@ -19,7 +19,7 @@ test('login to obtain token for authentication', async (t) => {
       password: 'santos'
     }
   })
-  t.is(wrongPassword.statusCode, 401)
+  t.equal(wrongPassword.statusCode, 401)
 
   const { token } = (await server.inject({
     url: '/login',
@@ -37,7 +37,7 @@ test('login to obtain token for authentication', async (t) => {
     }
   })
 
-  t.deepEqual(res.json(), { hello: 'world' })
+  t.same(res.json(), { hello: 'world' })
 
   await server.close()
 })

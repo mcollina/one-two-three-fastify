@@ -12,7 +12,7 @@ test('no token provided for authentication', async (t) => {
   server.register(fp(app))
 
   const res = await server.inject('/protected/something')
-  t.is(res.statusCode, 401)
+  t.equal(res.statusCode, 401)
 
   await server.close()
 })

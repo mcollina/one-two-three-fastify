@@ -1,5 +1,6 @@
 import { join } from 'desm'
-import jwt from 'fastify-jwt'
+import jwt from '@fastify/jwt'
+import autoload from '@fastify/autoload'
 
 export default async function (app, opts) {
   app.register(jwt, {
@@ -17,7 +18,7 @@ export default async function (app, opts) {
     }
   })
 
-  app.register(import('fastify-autoload'), {
+  app.register(autoload, {
     dir: join(import.meta.url, 'routes')
   })
 }

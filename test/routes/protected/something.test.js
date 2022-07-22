@@ -5,7 +5,7 @@ import app from '../../../app.js'
 
 const test = t.test
 
-test('authentication', async ({ deepEqual }) => {
+test('authentication', async ({ same }) => {
   const server = fastify()
 
   // so we can access decorators
@@ -27,7 +27,7 @@ test('authentication', async ({ deepEqual }) => {
     }
   })
 
-  deepEqual(res.json(), { hello: 'world' })
+  same(res.json(), { hello: 'world' })
 
   await server.close()
 })

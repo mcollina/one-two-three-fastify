@@ -5,14 +5,14 @@ import app from '../../app.js'
 
 const test = t.test
 
-test('load the hello world', async ({ is }) => {
+test('load the hello world', async ({ equal }) => {
   const server = fastify()
 
   // so we can access decorators
   server.register(fp(app))
 
   const res = await server.inject('/')
-  is(res.body, 'hello world')
+  equal(res.body, 'hello world')
 
   await server.close()
 })
